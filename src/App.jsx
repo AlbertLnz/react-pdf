@@ -1,5 +1,5 @@
 import Pdf from "./components/Pdf"
-import { PDFDownloadLink } from "@react-pdf/renderer"
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer"
 
 const App = () => {
   return (
@@ -13,6 +13,10 @@ const App = () => {
             )
           }
         </PDFDownloadLink>
+
+        <PDFViewer>
+          <Pdf />
+        </PDFViewer>
       </div>
     </div>
   )
