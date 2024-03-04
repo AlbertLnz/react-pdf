@@ -18,9 +18,14 @@ const Pdf = () => {
     <Document>
       <Page style={styles.page}>
         <Text>Title 1</Text>
-        <View style={styles.section}>
+        
+        <View style={styles.section}> {/* BODY */}
           <Text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officiis non nesciunt vero soluta iste iure, ad saepe maiores labore at eligendi repellendus reprehenderit dicta asperiores vitae, nostrum sint mollitia sit culpa? Quia eius, error eos sequi aspernatur ipsum, blanditiis dolore quibusdam aut in cumque ducimus laborum perferendis tempora architecto.</Text>
           <Image src={image} />
+        </View>
+
+        <View>  {/* FOOTER */}
+          <Text render={({ pageNumber, totalPages }) => `${pageNumber}/${totalPages}`}></Text>
         </View>
       </Page>
     </Document>
